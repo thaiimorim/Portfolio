@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="card.html">
+        <title> Portfólio</title>
+
+<style>
+body { 
+    margin: 0;
+    padding: 0;
+    font-family: Summer Hearts, sans-serif;
+    color:#0f0d77;
+    
+}
+
+/*HEADER*/
+
+.header-container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #1b191b;
+    background-image:url(page.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 0 270px;
+    position: relative;
+
+}
+h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+}
+
+.meu-botao {
+    background-color: #1b191b;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-color: #2650b7;
+  }
+  /*transposicao do boton*/
+  .meu-botao:hover {
+    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+    transform: 30px;
+  }
+  /*borda do boton*/
+  .meu-botao:active {
+    background-color: transparent;
+  }
+  /*boton arredondado*/
+  .meu-botao{
+    border-radius: 30px;
+
+    /*button transparente*/
+  }
+  .meu-botao {
+    background-color: transparent;
+    border: 2px solid #0f0d77;
+    padding: 28px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+/*menu*/
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.checkbox{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transition: 400ms ease-in-out 0s;
+}
+
+.checkbox .trace{
+    height: 2px;
+    width: 50px;
+    background-color:#0f0d77;
+    position: absolute;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out ;
+
+
+}
+.checkbox .trace:nth-child(1){
+    top: 26px;   
+    transform: rotate(0);
+
+} 
+.checkbox .trace:nth-child(2){
+    top: 46px;   
+    transform: rotate(0);
+    
+} 
+.checkbox .trace:nth-child(3){
+    top: 66px;   
+    transform: rotate(0);
+    
+} 
+
+#toggle{
+    display: none;
+}
+
+/*menu*/
+
+.menu {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    background-color: transparent;
+    height: 4px;
+    width: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 0px #1e6981;
+    z-index: -1;
+    transition: 400ms ease-in-out 0s;
+
+
+}
+.menu-items{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 400ms ease-in-out 0s;
+
+}
+.menu-items ul{
+    list-style-type: none;
+}
+.menu-items ul li a {
+    margin: 10px 0;
+    color: #1e6981;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 40px;
+
+}
+/*ANIMACAO DO MENU*/
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform:rotate(45deg);
+    top:47px;
+
+
+}
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    transform:translate(-100px);
+    width: 30px;
+    visibility:hidden;
+    opacity: 0;
+
+
+}
+#toggle:checked + .checkbox .trace:nth-child(3){
+    transform: rotate(-45deg);
+    top: 48px;
+}
+#toggle:checked + .checkbox{
+    background-color: #ffffff;
+
+}
+#toggle:checked ~ .menu{
+box-shadow: 0px 0px 0px 100vmax #ffffff;
+z-index: 1;
+}
+
+#toggle:checked ~ .menu-items{
+    visibility: visible;
+    opacity: 1;
+}
+/* cards interativos */
+main.cards {
+    display: flex;
+    padding: 32px;
+}
+main.cards section.card {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+    margin-left: 280px;
+}
+
+main.cards section.card .icon {
+    width: 80px;
+    height: 100px;
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+/*cor dos textos*/
+main.cards section.card h3 {
+    font-size: 100%;
+    margin: 10px 0;
+   color: transparent;
+    
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+    color: rgba(92, 90, 90, 0.644);
+
+}
+
+main.cards section.card button {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 70%;
+    font-weight: 500;
+    color: #7c7a7a;
+    margin-bottom: 16px 0;
+}
+
+main.cards section.card.figma button {
+    background: linear-gradient(to right, #9F66FF, #DFCBFF);
+}
+main.cards section.card.sobre button {
+    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+}
+main.cards section.card.git button {
+    background: linear-gradient(to right, #5c6bc0, #FFC7D9);
+}
+
+main.cards section.card.figma {
+    box-shadow: 80px 30px 60px -30px #b5a0d8;
+}
+main.cards section.card.sobre {
+    box-shadow: 80px 30px 60px -30px #88acd1;
+}
+main.cards section.card.git {
+    box-shadow: 80px 30px 60px -30px #fa99b8;
+}
+
+@media screen and (max-width: 800px) {
+
+
+    main.cards {
+        flex-direction: column ;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+}
+
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: #0f0d77;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #141414;
+}
+</style>
+    </head>
+    <body>
+        <header class="header-container"> 
+            <div class="header">
+                <div class="checkbox-container">
+                    <div class="checkbox-wrapper"> 
+                        <input type="checkbox" id="toggle">
+                        <label class= "checkbox" for="toggle"> 
+                            <div class="trace"></div>
+                            <div class="trace"></div>
+                            <div class="trace"></div>
+                        </label>
+                        
+                        <div class="menu"> </div>
+
+                        <nav class="menu-items">
+
+                            <ul>
+                                <li>
+                                    <a href="index.html" > Home </a>
+                            
+                                </li>
+                                
+                                 <li>
+                                     <a href="Sobre.html"> Sobre </a>
+                                 </li>
+                                <li>
+                                <a href="#"> Portifolio </a>
+                                
+                                </li>
+                            </ul>
+
+                        </nav>
+
+                    </div>
+    
+                </div>
+
+            </div>
+            <h1>Thaise Amorim</h1>
+            <h2>UX DESIGN</h2>
+            <h3></h3>
+            
+        <!--botao do linkedin-->
+            <a href="https://www.linkedin.com/in/thaise-amorim-02b251160/">
+                <button type="button" class="meu-botao">Linkedin</button>
+              </a>
+            
+        </header>
+        <main class="cards">
+            <section class="card figma">
+                      <div class="icon">
+                           <img src="figma.png" alt="FIGMA">
+                      </div>
+                      <h3>Imagens do Figma</h3>
+                      <span>Design do App. </span>
+    
+                      <a href="https://www.figma.com/file/haAyqCE2qRHcWFzyuQQjmT/Projetos?type=design&node-id=30-74">
+                               <button> Click aqui</button>
+                      </a>
+    
+            </section>
+    
+            <section class="card sobre">
+                <div class="icon">
+                    <img src="information.png" alt="Sobre Thaise">
+                </div>
+                <h3>Sobre Thaise</h3>
+                <span>Sobre.</span>
+                <a href="Sobre.html">
+                <button> Click aqui</button>
+            </a>
+            </section>
+            <section class="card git">
+                <div class="icon">
+                    <img src="githubimg.png" alt="Github">
+                </div>
+                <h3>Github</h3>
+                <span>Link do Github.</span>
+                <a href="https://github.com/thaiimorim/Portfolio/upload">
+                    <button> Click aqui</button>
+            </section>
+        </main>
+<footer class="footer">
+            <p>&copy; 2023 Meu Site Pessoal. Todos os direitos reservados.</p>
+        </footer>
+
+
+    </body>
+</html>
