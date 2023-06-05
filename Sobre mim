@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sobre Thaise</title>
+  <style>
+    body {
+      font-family: Gill Sans Extrabold , sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f5f5f5;
+      color:#000000;
+    }
+    body {
+font-family: "Georgia", serif;
+}
+
+    h1 {
+      color: #0f0d77;
+      text-align: center;
+      margin-top: 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    h2 {
+      color: #0f0d77;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    footer {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #ccc;
+      color: #666;
+    }
+
+    /* Personalização adicional */
+
+    .main-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-info p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <header>
+      <h1>Olá, eu sou Thaise Amorim Souza</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2 class="section-title">Sobre Mim</h2>
+        <p> Estou buscando minha primeira oportunidade como UX Designer. Tenho 23 anos e sou formada em Sistemas de Informação pela Universidade Nove de Julho. Possuo mais de quatro anos de experiência na área de TI, o que me proporcionou sólidos conhecimentos nesse campo. Estou entusiasmada para aplicar minhas habilidades e conhecimentos em design centrado no usuário, buscando criar experiências digitais intuitivas e impactantes. Estou constantemente atualizada sobre as últimas tendências e práticas em UX Design, e estou pronta para contribuir com minha criatividade, habilidades de resolução de problemas e paixão pelo design de experiência do usuário.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="section-title">Experiência</h2>
+        <p><b>Estágio AMS - SONDA IT</b></p>
+        <p>Atuava em sustentação de sistemas legados do cliente Bayer, na área de AMS-Legados realização de melhorias e manutenções em sites e sistemas internos  localizando falhas no processo e efetuando soluções preditivas, preventivas e paliativas, tendo conhecimento em método AGILE, MY SQL, C# , HTML/CSS.
+        </p>
+
+        <p><b>CHANGE MANAGEMENT SAP - IBM BRASIL</b></p>
+        <p>Gerenciamento de projetos e mudanças, controle e modificação de métodos, processos e sistemas, localizando falhas, realizando processo de implementação e soluções com foco na otimização de rotinas e redução de custos.
+        </p>
+      
+      </section>
+
+      <section>
+        <h2 class="section-title">Habilidades</h2>
+        <ul>
+          <li>User Experience ( Certificado FIAP).</li>
+          <li>Design Thinking</li>
+          <li>Projetos Agile.</li>
+          <li>Criação de Wireframe.</li>
+          <li>Prototipagem.</li>
+          <li>Arquitetura de Informação.</li>
+          <li>HTML5/CSS.</li>
+          <li>FIGMA.</li>
+          <li>Analise de dados( Excel Avançado).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title">Contato</h2>
+        <div class="contact-info">
+          <p>Email: thaiimorim@gmail.com</p>
+          <p>Telefone: (11)93360-1445./p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Meu Site Pessoal. Feito por Thaise Amorim.</p>
+    </footer>
+  </div>
+</body>
+</html>
