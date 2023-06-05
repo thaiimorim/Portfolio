@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Cards</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #F6F9FF;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #434343;
+    font-size: 16px;
+}
+
+main.cards {
+    display: flex;
+    padding: 32px;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 468px;
+    margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+    margin-left: 0;
+}
+
+main.cards section.card .icon {
+    width: 64px;
+    height: 64px
+}
+
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+main.cards section.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 16px;
+
+}
+
+main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: 0;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 16px 0;
+}
+
+main.cards section.card.figma button {
+    background: linear-gradient(to right, #9F66FF, #DFCBFF);
+}
+main.cards section.card.sobre button {
+    background: linear-gradient(to right, #3E8AFF, #BBDEFF);
+}
+main.cards section.card.git button {
+    background: linear-gradient(to right, #5c6bc0, #FFC7D9);
+}
+
+main.cards section.card.figma {
+    box-shadow: 20px 20px 50px -30px #DBC4FF;
+}
+main.cards section.card.sobre {
+    box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+main.cards section.card.git {
+    box-shadow: 20px 20px 50px -30px #FFC1D5;
+}
+
+@media screen and (max-width: 730px) {
+    main.cards {
+        flex-direction: column;
+    }
+
+    main.cards section.card {
+        margin-left: 0;
+        margin-bottom: 32px;
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0;
+    }
+
+    main.cards section.card button {
+        font-size: 70%;
+    }
+
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> <!--cor do fundo-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="cards">
+        <section class="card figma">
+                  <div class="icon">
+                       <img src="figma.png" alt="FIGMA">
+                  </div>
+                  <h3>Imagens do Figma</h3>
+                  <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+
+                  <a href="https://www.figma.com/file/haAyqCE2qRHcWFzyuQQjmT/Untitled?type=design&node-id=0-1">
+                           <button> Click aqui</button>
+                  </a>
+
+        </section>
+
+        <section class="card sobre">
+            <div class="icon">
+                <img src="information.png" alt="Sobre Thaise">
+            </div>
+            <h3>Sobre Thaise</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <a href="Sobre.html">
+            <button> Click aqui</button>
+        </a>
+        </section>
+        <section class="card git">
+            <div class="icon">
+                <img src="githubimg.png" alt="Github">
+            </div>
+            <h3>Github</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <a href="https://github.com/thaiimorim/Portfolio/upload">
+                <button> Click aqui</button>
+        </section>
+    </main>
+</body>
+</html>
